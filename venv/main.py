@@ -22,7 +22,8 @@ def page_skill_candidate(skill_name):
 def page_candidate(candidate_id):
     candidate = u.get_candidate(candidate_id)
     candidates = [candidate]
+    candidate_image = u.candidate_image(candidate_id)
     page = u.build_page(candidates)
-    return page
+    return f"{candidate_image} {page}"
 
 app.run()

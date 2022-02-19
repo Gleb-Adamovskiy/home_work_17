@@ -34,6 +34,14 @@ def get_candidates_by_skill(skill_name):
     return skills_candidates
 
 
+def candidate_image(candidate_id):
+    """
+    возвращает изображение кандидата, завернутое в тег <img>
+    """
+    candidate = get_candidate(candidate_id)
+    image_url = candidate["picture"]
+    return f"<img src = {image_url}/>"
+
 def build_page(candidates):
     """
     формирует страницу представления
